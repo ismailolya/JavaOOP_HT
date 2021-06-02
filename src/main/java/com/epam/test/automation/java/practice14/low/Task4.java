@@ -5,7 +5,9 @@ import java.util.List;
 public class Task4 {
 
     public static List<String> filterAndSortByLastDigit(int number, List<String> stringList) {
-        //TODO: Write your own solution in the return statement;
-        return null;
+        return stringList.stream()
+                    .filter(string -> string.length() == number && Character.isDigit(string.charAt(string.length()-1)))
+                    .sorted()
+                    .collect(Collectors.toList());
     }
 }
