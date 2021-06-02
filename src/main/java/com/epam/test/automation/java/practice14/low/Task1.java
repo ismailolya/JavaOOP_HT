@@ -5,7 +5,8 @@ import java.util.List;
 public class Task1 {
 
     public static List<String> filterByFirstAndLastCharacter(char symbol, List<String> stringList) {
-        //TODO: Write your own solution in the return statement;
-        return null;
+        return stringList.stream()
+                .filter(string -> string.startsWith(String.valueOf(symbol)) && string.endsWith(String.valueOf(symbol)) && string.length()>1)
+                .collect(Collectors.toList());
     }
 }
