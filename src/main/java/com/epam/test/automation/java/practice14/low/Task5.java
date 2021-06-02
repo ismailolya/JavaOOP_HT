@@ -5,7 +5,10 @@ import java.util.List;
 public class Task5 {
 
     public static List<String> getSortedAscOddValues(List<Integer> intList) {
-        //TODO: Write your own solution in the return statement;
-        return null;
+        return intList.stream()
+                    .filter(number -> number%2 != 0)
+                    .map(number -> number.toString())
+                    .sorted()
+                    .collect(Collectors.toList());
     }
 }
