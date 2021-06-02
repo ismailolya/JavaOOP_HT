@@ -4,7 +4,9 @@ import java.util.List;
 
 public class Task2 {
     public static List<Integer> sortAscLengthsOfStrings(List<String> stringList) {
-        //TODO: Write your own solution in the return statement;
-        return null;
+        return stringList.stream()
+                    .map(string -> string.length())
+                    .sorted()
+                    .collect(Collectors.toList());
     }
 }
