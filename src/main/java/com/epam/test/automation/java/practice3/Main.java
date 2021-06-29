@@ -7,7 +7,7 @@ public class Main {
      * Implement code according to description of task 1.
      * </summary>
      */
-    public static int[] task1(int[] array) {
+    public static int[] task1(int[] array)  {
          
          int temp;
         for (int i = 0; i < array.length / 2; i++) {
